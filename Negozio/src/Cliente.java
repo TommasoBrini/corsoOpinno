@@ -1,7 +1,9 @@
+package Negozio;
+
 public class Cliente {
     private String name;
     private int age;
-    private int points;
+    private int pointsCoupon = 0;
 
     public Cliente(String name, int age) {
         this.name = name;
@@ -16,11 +18,11 @@ public class Cliente {
         return age;
     }
 
-    public int getPoints() {
-        return points;
+    public int getPointsCoupon() {
+        return pointsCoupon;
     }
 
-    public void setPoints(int points) {
-        this.points = points;
+    public void setPointsCoupon(int pointsCoupon) {
+        this.pointsCoupon = pointsCoupon;
     }
 }

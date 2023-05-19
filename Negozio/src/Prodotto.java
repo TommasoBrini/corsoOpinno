@@ -1,10 +1,13 @@
+package Negozio;
+
 public class Prodotto {
     private String name;
     private double price;
     private int quantity;
 
+    //COSTRUTTORE SENZA QUANTITA'
     public Prodotto(String name, double price) {
-        this(name, price, 1);
+        new Prodotto(name,price,1);
     }
 
     public Prodotto(String name, double price, int quantity) {
@@ -27,5 +30,14 @@ public class Prodotto {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    @Override
+    public String toString() {
+        return "Prodotto{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                '}';
     }
 }
