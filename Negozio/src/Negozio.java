@@ -1,4 +1,3 @@
-package Negozio;
 
 import java.util.Arrays;
 

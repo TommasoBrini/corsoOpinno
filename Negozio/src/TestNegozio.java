@@ -1,5 +1,3 @@
-package Negozio;
-
 public class TestNegozio {
     public static void main(String[] args) {
         Cliente cliente = new Cliente("Massimo",61);

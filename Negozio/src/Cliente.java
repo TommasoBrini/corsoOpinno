@@ -1,5 +1,3 @@
-package Negozio;
-
 public class Cliente {
     private String name;
     private int age;

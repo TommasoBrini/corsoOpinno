@@ -1,5 +1,3 @@
-package Negozio;
-
 public class Prodotto {
     private String name;
     private double price;
