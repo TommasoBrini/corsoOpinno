@@ -11,6 +11,7 @@ public class Main {
         Prenotazione p3 = new PrenotazioneSingola("34", Preferenza.INTERNO);
         Prenotazione p4 = new PrenotazioneSingola("56", Preferenza.ESTERNO);
         System.out.println(miniGestorePrenotazioni.prenota(p1));
+        System.out.println("Modifica git");
         miniGestorePrenotazioni.prenota(p2);
         miniGestorePrenotazioni.prenota(p3);
         miniGestorePrenotazioni.prenota(p4);
@@ -44,6 +45,7 @@ public class Main {
             }
         System.out.println(prenotazioniInterno + prenotazioniEsterno == 5);
 //verifichiamo i posti effettivamente riservati
+        miniGestorePrenotazioni.terminaPrenotazione(p4);
         int postiTotali = 0;
         for (int i = 0; i < prenotazioniInternoArray.length; i++)
             if (prenotazioniInternoArray[i] != null) {
@@ -53,10 +55,11 @@ public class Main {
             if (prenotazioniEsternoArray[i] != null) {
                 postiTotali += prenotazioniEsternoArray[i].getnPosti();
             }
-        System.out.println(postiTotali == 6);
+        System.out.println(postiTotali == 5);
         Prenotazione p6 = new PrenotazioneSingola("67", Preferenza.ESTERNO);
         boolean inserita = miniGestorePrenotazioni.prenota(p6);
         System.out.println(inserita);
+
 
     }
 }

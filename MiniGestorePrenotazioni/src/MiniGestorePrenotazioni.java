@@ -63,6 +63,15 @@ public class MiniGestorePrenotazioni {
             if(prenotazione != null && prenotazione.getCodUnivoco().equals(p.getCodUnivoco())){
                 prenotazioniAttualiInterno[i] = null;
                 m = m + prenotazione.getnPosti();
+                i++;
+            }
+        }
+        i = 0;
+        for(Prenotazione prenotazione : prenotazioniAttualiEsterno){
+            if(prenotazione != null && prenotazione.getCodUnivoco().equals(p.getCodUnivoco())){
+                prenotazioniAttualiEsterno[i] = null;
+                n = n + prenotazione.getnPosti();
+                i++;
             }
         }
 
