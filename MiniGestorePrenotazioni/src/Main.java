@@ -11,7 +11,6 @@ public class Main {
         Prenotazione p3 = new PrenotazioneSingola("34", Preferenza.INTERNO);
         Prenotazione p4 = new PrenotazioneSingola("56", Preferenza.ESTERNO);
         System.out.println(miniGestorePrenotazioni.prenota(p1));
-        System.out.println("Modifica git");
         miniGestorePrenotazioni.prenota(p2);
         miniGestorePrenotazioni.prenota(p3);
         miniGestorePrenotazioni.prenota(p4);
