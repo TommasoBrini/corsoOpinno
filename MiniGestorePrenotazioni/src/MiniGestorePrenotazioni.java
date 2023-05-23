@@ -63,19 +63,34 @@ public class MiniGestorePrenotazioni {
             if(prenotazione != null && prenotazione.getCodUnivoco().equals(p.getCodUnivoco())){
                 prenotazioniAttualiInterno[i] = null;
                 m = m + prenotazione.getnPosti();
-                i++;
+                aggiornaPrenotazioni(prenotazioniAttualiEsterno, false);
+                break;
             }
+            i++;
         }
         i = 0;
         for(Prenotazione prenotazione : prenotazioniAttualiEsterno){
             if(prenotazione != null && prenotazione.getCodUnivoco().equals(p.getCodUnivoco())){
                 prenotazioniAttualiEsterno[i] = null;
                 n = n + prenotazione.getnPosti();
-                i++;
+                aggiornaPrenotazioni(prenotazioniAttualiInterno, true);
+                break;
+            }
+            i++;
+        }
+    }
+
+    private void aggiornaPrenotazioni(Prenotazione[] arr, boolean bool){
+        //TROVO LE PRENOTAZIONI NON SODDISFATTE
+        //NEL'ARRAY INTERNO TROVO QUELLE CON PREFERENZA ESTERNO E VICEVERSA
+        for (Prenotazione prenotazione : arr) {
+            if(prenotazione != null && prenotazione.getClass() == PrenotazioneSingola.class && ((PrenotazioneSingola) prenotazione).getPreferenza() == (bool ? Preferenza.ESTERNO : Preferenza.INTERNO)){
+                terminaPrenotazione(prenotazione);
+                prenota(prenotazione);
             }
         }
-
     }
+
     public Prenotazione[] prenotazioniAttualiEsterno(){
         return prenotazioniAttualiEsterno;
     } //ritorna un array con le attuali prenotazioni per l’esterno del ristorante

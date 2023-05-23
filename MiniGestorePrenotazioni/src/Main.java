@@ -5,16 +5,34 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         MiniGestorePrenotazioni miniGestorePrenotazioni =
-                new MiniGestorePrenotazioni(3, 5);
+                new MiniGestorePrenotazioni(5, 2);
         Prenotazione p1 = new PrenotazioneSingola("12", Preferenza.ESTERNO);
         Prenotazione p2 = new PrenotazioneSingola("23", Preferenza.ESTERNO);
-        Prenotazione p3 = new PrenotazioneSingola("34", Preferenza.INTERNO);
-        Prenotazione p4 = new PrenotazioneSingola("56", Preferenza.ESTERNO);
-        System.out.println(miniGestorePrenotazioni.prenota(p1));
+        Prenotazione p3 = new PrenotazioneSingola("34", Preferenza.ESTERNO);
+        Prenotazione p4 = new PrenotazioneSingola("56", Preferenza.INTERNO);
+
+        miniGestorePrenotazioni.prenota(p1);
         miniGestorePrenotazioni.prenota(p2);
         miniGestorePrenotazioni.prenota(p3);
         miniGestorePrenotazioni.prenota(p4);
+        Prenotazione[] prenotazioniInternoArray = miniGestorePrenotazioni.prenotazioniAttualiInterno();
+        Prenotazione[] prenotazioniEsternoArray = miniGestorePrenotazioni.prenotazioniAttualiEsterno();
 
+        System.out.println(Arrays.toString(prenotazioniInternoArray));
+        System.out.println(Arrays.toString(prenotazioniEsternoArray));
+
+        miniGestorePrenotazioni.terminaPrenotazione(p2);
+
+        prenotazioniInternoArray = miniGestorePrenotazioni.prenotazioniAttualiInterno();
+        prenotazioniEsternoArray = miniGestorePrenotazioni.prenotazioniAttualiEsterno();
+
+        System.out.println();
+        System.out.println("DOPO SCAMBIO");
+        System.out.println(Arrays.toString(prenotazioniInternoArray));
+        System.out.println(Arrays.toString(prenotazioniEsternoArray));
+
+
+        /*
         Prenotazione[] prenotazioniInternoArray = miniGestorePrenotazioni.prenotazioniAttualiInterno();
         Prenotazione[] prenotazioniEsternoArray = miniGestorePrenotazioni.prenotazioniAttualiEsterno();
         int prenotazioniInterno = 0, prenotazioniEsterno = 0;
@@ -58,7 +76,7 @@ public class Main {
         Prenotazione p6 = new PrenotazioneSingola("67", Preferenza.ESTERNO);
         boolean inserita = miniGestorePrenotazioni.prenota(p6);
         System.out.println(inserita);
-
+*/
 
     }
 }
