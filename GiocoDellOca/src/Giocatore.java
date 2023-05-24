@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Giocatore {
     private String nome;
     private int posizioneAttuale;
@@ -22,10 +24,14 @@ public class Giocatore {
     }
 
     public void setPosizioneAttuale(int posizioneAttuale) {
-        this.posizioneAttuale = posizioneAttuale;
+        this.posizioneAttuale += posizioneAttuale;
     }
 
     public void setPunteggio(int punteggio) {
-        this.punteggio = punteggio;
+        this.punteggio += punteggio;
+    }
+
+    public int lanciaDadi(){
+        return new Random().nextInt(6) + 1;
     }
 }

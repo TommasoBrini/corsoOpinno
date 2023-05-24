@@ -4,7 +4,12 @@ public class CasellaVuota extends Casella{
     }
 
     @Override
-    public void effettoCasella() {
-        //NON FA NULLA
+    public void effettoCasella(Giocatore giocatore) {
+        System.out.println("SEI CAPITATO IN UNA CASELLA VUOTA!");
+    }
+
+    @Override
+    public String toString() {
+        return "CasellaVuota{}";
     }
 }

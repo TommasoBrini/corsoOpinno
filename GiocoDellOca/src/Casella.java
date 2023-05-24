@@ -5,6 +5,6 @@ public abstract class Casella {
         this.id = id;
     }
 
-    public abstract void effettoCasella();
+    public abstract void effettoCasella(Giocatore giocatore);
 
 }
