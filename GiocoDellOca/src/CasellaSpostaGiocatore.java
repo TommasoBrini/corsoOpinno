@@ -13,9 +13,9 @@ public class CasellaSpostaGiocatore extends Casella{
     @Override
     public void effettoCasella(Giocatore giocatore) {
         //SPOSTA IL GIOCATORE
-        System.out.println("SEI CAPITATO IN UNA CASELLA PUNTI!");
-        giocatore.setPunteggio(pos);
-        System.out.println("PUNTEGGIO INCREMENTATO DI " + pos + " PUNTI");
+        System.out.println("SEI CAPITATO IN UNA CASELLA SPOSTAMENTO!");
+        giocatore.setPosizioneAttuale(pos);
+        System.out.println("POSIZIONE INCREMENTATO DI " + pos + " PUNTI");
     }
 
     @Override

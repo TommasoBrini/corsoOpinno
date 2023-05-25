@@ -16,4 +16,7 @@ public class GiocoDellOca {
         }
     }
 
+    public Tabellone getTabellone() {
+        return tabellone;
+    }
 }

@@ -4,6 +4,7 @@ import java.util.Random;
 public class Tabellone {
     private Casella[] caselle;
     private int lunghezza;
+    private boolean vittoria = false;
 
     public Tabellone(int n){
         //CREO IL TABELLONE DI LUNGHEZZA n
@@ -38,7 +39,25 @@ public class Tabellone {
 
     public void spostaGiocatore(Giocatore giocatore){
         int num = giocatore.lanciaDadi();
+        System.out.println("e' uscito " + num);
+        if(giocatore.getPosizioneAttuale() + num > lunghezza - 1){
+            /*System.out.println("é dentro");
+            System.out.println("Mancano " + (lunghezza - 1 - giocatore.getPosizioneAttuale()) + "posizioni");*/
+            num = num - (lunghezza - 1 - giocatore.getPosizioneAttuale());
+            //System.out.println(num);
+            giocatore.setPosizioneAttuale(lunghezza - 1 - giocatore.getPosizioneAttuale());
+            //System.out.println(giocatore.getPosizioneAttuale() + "Siamo nell'ultima casella");
+            num = -num;
+        }
         giocatore.setPosizioneAttuale(num);
+        if(giocatore.getPosizioneAttuale() == (lunghezza -1)){
+            System.out.println("Giocatore " + giocatore + " ha vinto!!");
+            vittoria = true;
+        }
         caselle[giocatore.getPosizioneAttuale()].effettoCasella(giocatore);
+    }
+
+    public boolean isVittoria() {
+        return vittoria;
     }
 }

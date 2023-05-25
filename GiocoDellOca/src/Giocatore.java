@@ -34,4 +34,9 @@ public class Giocatore {
     public int lanciaDadi(){
         return new Random().nextInt(6) + 1;
     }
+
+    @Override
+    public String toString() {
+        return nome;
+    }
 }

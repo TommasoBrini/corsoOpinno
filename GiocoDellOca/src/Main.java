@@ -7,6 +7,9 @@ public class Main {
         Giocatore[] gioc = {g1, g2};
 
         GiocoDellOca gioco = new GiocoDellOca(20, gioc);
-        gioco.giocaUnTurno();
+        while(!gioco.getTabellone().isVittoria()){
+            System.out.println("Inizio turno");
+            gioco.giocaUnTurno();
+        }
     }
 }
