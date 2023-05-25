@@ -41,12 +41,8 @@ public class Tabellone {
         int num = giocatore.lanciaDadi();
         System.out.println("e' uscito " + num);
         if(giocatore.getPosizioneAttuale() + num > lunghezza - 1){
-            /*System.out.println("é dentro");
-            System.out.println("Mancano " + (lunghezza - 1 - giocatore.getPosizioneAttuale()) + "posizioni");*/
             num = num - (lunghezza - 1 - giocatore.getPosizioneAttuale());
-            //System.out.println(num);
             giocatore.setPosizioneAttuale(lunghezza - 1 - giocatore.getPosizioneAttuale());
-            //System.out.println(giocatore.getPosizioneAttuale() + "Siamo nell'ultima casella");
             num = -num;
         }
         giocatore.setPosizioneAttuale(num);
