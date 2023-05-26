@@ -1,4 +1,4 @@
 package model.food.pizza.base;
 
-public class Salami {
+public class Salami extends PizzaBase{
 }

@@ -1,4 +1,6 @@
 package model.franchising;
 
-public class Franchising {
+import model.Menu;
+
+public class Franchising implements Menu {
 }

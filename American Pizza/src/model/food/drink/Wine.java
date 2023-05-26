@@ -1,4 +1,4 @@
 package model.food.drink;
 
-public class Wine {
+public class Wine extends Drink{
 }

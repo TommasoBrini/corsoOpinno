@@ -1,4 +1,6 @@
 package model.food.drink;
 
-public class Drink {
+import model.food.FoodItem;
+
+public class Drink implements FoodItem {
 }

@@ -1,4 +1,4 @@
 package model.food.pizza.topping;
 
-public class Ham {
+public class Ham extends Topping{
 }

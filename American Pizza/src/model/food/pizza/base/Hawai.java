@@ -1,4 +1,4 @@
 package model.food.pizza.base;
 
-public class Hawai {
+public class Hawai extends PizzaBase{
 }

@@ -1,4 +1,6 @@
 package model.food;
 
-public interface FoodItem {
+import model.Menu;
+
+public interface FoodItem extends Menu {
 }

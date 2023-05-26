@@ -1,4 +1,6 @@
 package model.food.pizza.base;
 
-public class PizzaBase {
+import model.food.pizza.Pizza;
+
+public class PizzaBase implements Pizza {
 }

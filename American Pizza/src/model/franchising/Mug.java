@@ -1,4 +1,4 @@
 package model.franchising;
 
-public class Mug {
+public class Mug extends Franchising{
 }
