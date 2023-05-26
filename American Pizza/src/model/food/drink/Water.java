@@ -2,6 +2,6 @@ package model.food.drink;
 
 public class Water extends Drink{
     public Water() {
-        super(0, "Water", 1.29);
+        super("Water (0.5l)",0,1.29);
     }
 }

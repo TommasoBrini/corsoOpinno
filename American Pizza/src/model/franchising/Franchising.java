@@ -25,6 +25,6 @@ public class Franchising implements Menu {
 
     @Override
     public String getMenuItemLine() {
-        return "item: " + name + " - price " + price;
+        return name + " - price " + price;
     }
 }

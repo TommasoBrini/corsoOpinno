@@ -2,18 +2,19 @@ package model.food.pizza.topping;
 
 import model.food.pizza.Pizza;
 
-public class Onion extends Topping{
-    private final String name = "Onions";
-    private final Double price = 0.69;
-    private final double calories = 22;
+public class Cheese extends Topping{
 
-    public Onion(Pizza pizza){
+    private final String name = "Cheese";
+    private final Double price = 0.69;
+    private final double calories = 92;
+
+    public Cheese(Pizza pizza){
         super(pizza);
     }
 
     @Override
     public String getName() {
-        return this.pizza.getName() + " + " + name;
+        return this.pizza.getName() + name;
     }
 
     @Override

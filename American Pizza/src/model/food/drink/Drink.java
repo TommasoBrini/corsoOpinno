@@ -9,7 +9,7 @@ public class Drink implements FoodItem {
 
     private double price;
 
-    public Drink(double calories, String name, double price) {
+    public Drink(String name, double calories,  double price) {
         this.calories = calories;
         this.name = name;
         this.price = price;
@@ -27,7 +27,7 @@ public class Drink implements FoodItem {
 
     @Override
     public String getMenuItemLine() {
-        return "item: " + name + " - price " + price + " - calories: " + calories;
+        return name + " - calories: " + calories + " - price " + price;
     }
 
     @Override

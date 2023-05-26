@@ -3,23 +3,34 @@ package model.food.pizza.base;
 import model.food.pizza.Pizza;
 
 public class PizzaBase implements Pizza {
+
+    String name;
+    double price;
+    double calories;
+
+    public PizzaBase(String name, double price, double caloria) {
+        this.name = name;
+        this.price = price;
+        this.calories = caloria;
+    }
+
     @Override
     public String getName() {
-        return null;
+        return name;
     }
 
     @Override
     public double getPrice() {
-        return 0;
+        return price;
     }
 
     @Override
     public String getMenuItemLine() {
-        return null;
+        return this.name + " - calories: " + this.calories + " - price: " + this.price;
     }
 
     @Override
     public double getCalories() {
-        return 0;
+        return this.calories;
     }
 }

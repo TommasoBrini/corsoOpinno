@@ -2,12 +2,12 @@ package model.food.pizza.topping;
 
 import model.food.pizza.Pizza;
 
-public class Onion extends Topping{
-    private final String name = "Onions";
-    private final Double price = 0.69;
-    private final double calories = 22;
+public class Pineapple extends Topping{
+    private final String name = "Pineapple";
+    private final Double price = 0.79;
+    private final double calories = 24;
 
-    public Onion(Pizza pizza){
+    public Pineapple(Pizza pizza){
         super(pizza);
     }
 
