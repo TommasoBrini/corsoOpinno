@@ -51,4 +51,7 @@ public class Library {
         return res;
     }
 
+    public Collection<Book> getArchivio() {
+        return archivio.values();
+    }
 }

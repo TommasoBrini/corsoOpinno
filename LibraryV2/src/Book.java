@@ -30,15 +30,6 @@ public class Book {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if(this == obj || obj == null || getClass() != obj.getClass()){
-            return false;
-        }
-        Book book = (Book) obj;
-        return this.getCod() == book.getCod();
-    }
-
-    @Override
     public String toString() {
         return titolo + ": " + sinossi;
     }
