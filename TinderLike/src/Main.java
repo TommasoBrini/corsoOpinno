@@ -1,3 +1,7 @@
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
@@ -11,18 +15,28 @@ public class Main {
         Interesse politica = new Interesse(3, "Politica");
         Interesse arte = new Interesse(4, "Arte");
         Interesse musica = new Interesse(5, "Musica");
+        Interesse ballo = new Interesse(5, "ballo");
+        Interesse canto = new Interesse(5, "canto");
+        Interesse palestra = new Interesse(5, "Palestra");
+        Interesse nuoto = new Interesse(5, "Nuoto");
+
 
         utente1.addInteresse(figa);
         utente1.addInteresse(calcio);
         utente1.addInteresse(politica);
+        utente1.addInteresse(canto);
+        utente1.addInteresse(ballo);
 
         utente2.addInteresse(figa);
         utente2.addInteresse(arte);
         utente2.addInteresse(musica);
+        utente2.addInteresse(canto);
+        utente2.addInteresse(ballo);
 
         utente3.addInteresse(figa);
-        utente2.addInteresse(calcio);
-        utente2.addInteresse(musica);
+        utente3.addInteresse(calcio);
+        utente3.addInteresse(nuoto);
+        utente3.addInteresse(palestra);
 
         Tinder tinder = new Tinder();
         tinder.addUtente(utente1);
@@ -30,6 +44,9 @@ public class Main {
         tinder.addUtente(utente3);
 
         System.out.println(tinder.cercaAmico(utente1).getNome());
-        
+
+        Set<Utente> max = tinder.utentiPiuSimili();
+        System.out.println(max);
+
     }
 }

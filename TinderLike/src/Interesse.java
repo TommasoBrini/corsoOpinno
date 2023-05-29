@@ -14,4 +14,9 @@ public class Interesse {
     public String getTesto() {
         return testo;
     }
+
+    @Override
+    public String toString() {
+        return testo;
+    }
 }

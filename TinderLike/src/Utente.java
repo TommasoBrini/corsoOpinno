@@ -26,4 +26,9 @@ public class Utente {
     public Set<Interesse> getInteressi() {
         return interessi;
     }
+
+    @Override
+    public String toString() {
+        return "nome='" + nome;
+    }
 }

@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Tinder {
     Set<Utente> utenti = new HashSet<>();
@@ -29,5 +26,35 @@ public class Tinder {
             }
         }
         return res;
+    }
+
+    public Set<Utente> utentiPiuSimili(){
+        Map<Set<Utente>, Integer> map = new HashMap<>();
+        for(Utente ut : utenti){
+            for (Utente ut2 : utenti){
+                int count = 0;
+                if(!ut.equals(ut2)){
+                    Set<Utente> list = new HashSet<>();
+                    list.add(ut);
+                    list.add(ut2);
+                    for(Interesse inter : ut.getInteressi()){
+                        if(ut2.getInteressi().contains(inter)){
+                            count++;
+                        }
+                    }
+                    map.put(list, count);
+                }
+            }
+        }
+        Set<Utente> chiaveMax = null;
+        int valoreMax = Integer.MIN_VALUE;
+
+        for (Map.Entry<Set<Utente>, Integer> entry : map.entrySet()) {
+            if (entry.getValue() > valoreMax) {
+                valoreMax = entry.getValue();
+                chiaveMax = entry.getKey();
+            }
+        }
+        return chiaveMax;
     }
 }
