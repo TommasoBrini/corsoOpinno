@@ -38,4 +38,13 @@ public class Author {
     public void removeBook(Book book){
         libri.remove(book);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        /*if(this == obj || obj == null || getClass() != obj.getClass()){
+            return false;
+        }*/
+        Author author = (Author) obj;
+        return this.getCodice() == author.getCodice();
+    }
 }

@@ -37,4 +37,9 @@ public class Book {
         Book book = (Book) obj;
         return this.getCod() == book.getCod();
     }
+
+    @Override
+    public String toString() {
+        return titolo + ": " + sinossi;
+    }
 }

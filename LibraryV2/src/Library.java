@@ -1,25 +1,54 @@
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Library {
 
-    private Map<Integer, String> archivio;
+    private Map<Integer, Book> archivio;
+
+    public Library() {
+        this.archivio = new HashMap<>();
+    }
 
     public void addLibro(Book libro){
-        archivio.put(libro.getCod(),libro.getTitolo()+libro.getAutore());
+        archivio.put(libro.getCod(),libro);
     }
 
     public void deleteLibro(Book libro){
+        libro.getAutore().removeBook(libro);
         archivio.remove(libro.getCod());
     }
 
-    public void researchLibro(Book libro){
-        archivio.get(libro.getCod());
+    public Book research(int codice){
+        return archivio.get(codice);
     }
 
+    public List<Book> research(String titolo){
+        List<Book> res = new ArrayList<>();
+        for(Book book : archivio.values()){
+            if(book.getTitolo().equals(titolo)){
+                res.add(book);
+            }
+        }
+        return res;
+    }
+
+    public List<Book> research(Author author){
+        List<Book> res = new ArrayList<>();
+        for(Book book : archivio.values()){
+            if(book.getAutore().equals(author)){
+                res.add(book);
+            }
+        }
+        return res;
+    }
 
     public StringBuilder stampaLibro(Author autore) {
-        return null;
+        StringBuilder res = new StringBuilder();
+        List<Book> list  = autore.getLibri();
+        list.sort(Comparator.comparing(Book::getTitolo));
+        for (Book book : list) {
+            res.append(book.toString()).append("\n");
+        }
+        return res;
     }
 
 }

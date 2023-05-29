@@ -2,16 +2,28 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Invio with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Library myLibrary = new Library();
 
-        // Press Maiusc+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Author author1 = new Author(1, "Stephen", "King");
+        Author author2 = new Author(2, "Dante", "Alighieri");
 
-            // Press Maiusc+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        Book book = new Book(1, "Shining", "Fa cagare sotto", author1);
+        Book book2 = new Book(2, "It", "Fa ancora più scagazzare", author1);
+        Book book3 = new Book(3, "Divina Commedia", "Che palle", author2);
+
+        myLibrary.addLibro(book);
+        myLibrary.addLibro(book2);
+        myLibrary.addLibro(book3);
+
+        System.out.println(myLibrary.research(2));
+        System.out.println(myLibrary.research("It"));
+        System.out.println(myLibrary.research(author1));
+
+        System.out.println(myLibrary.stampaLibro(author1));
+
+        myLibrary.deleteLibro(book);
+
+        System.out.println(myLibrary.stampaLibro(author1));
+
     }
 }
