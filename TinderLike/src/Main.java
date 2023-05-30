@@ -23,7 +23,7 @@ public class Main {
 
         utente1.addInteresse(figa);
         utente1.addInteresse(calcio);
-        utente1.addInteresse(politica);
+        utente1.addInteresse(musica);
         utente1.addInteresse(canto);
         utente1.addInteresse(ballo);
 
@@ -35,8 +35,8 @@ public class Main {
 
         utente3.addInteresse(figa);
         utente3.addInteresse(calcio);
-        utente3.addInteresse(nuoto);
-        utente3.addInteresse(palestra);
+        utente3.addInteresse(politica);
+        utente3.addInteresse(canto);
 
         Tinder tinder = new Tinder();
         tinder.addUtente(utente1);

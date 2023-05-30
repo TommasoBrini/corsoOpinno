@@ -15,15 +15,19 @@ public class Tinder {
         int maxCount = 0;
         Utente res = null;
         for(Utente ut : utenti){
-            int count = 0;
-            for (Interesse inter : utente.getInteressi()){
-                if(utente.getInteressi().contains(inter)){
-                    count++;
+            if(ut != utente){
+                int count = 0;
+                for (Interesse inter : ut.getInteressi()){
+                    if(utente.getInteressi().contains(inter)){
+                        count++;
+                    }
+                }
+                if(count > maxCount){
+                    res = ut;
+                    maxCount = count;
                 }
             }
-            if(count > maxCount){
-                res = ut;
-            }
+
         }
         return res;
     }
