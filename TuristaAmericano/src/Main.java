@@ -82,7 +82,23 @@ public class Main {
         System.out.println("*** ULTIMA PRENOTAZIONE DI " + u5 + " ***");
         System.out.println(piattaforma.lastPrenotazione(u5.getEmail()));
 
-        
+        //STAMPA LA ABITAZIONE PIù GETTONATA
+        System.out.println("*** ABITAZIONE PIù GETTONATA ***");
+        System.out.println(piattaforma.abitazioneGettonata());
+
+        //STAMPA GLI HOST CON PIù PRENOTAZIONI
+        System.out.println("*** HOST PIù GETTONATI ***");
+        System.out.println(piattaforma.hostGettonato());
+
+        //STAMPA TUTTI I SUPERHOST
+        System.out.println("*** SUPER HOST ***");
+        piattaforma.rendiSuperHost(((Host) u4).getCodHost());
+        System.out.println(piattaforma.getSuperHost());
+
+        //OTTENERE I 5 UTENTI CON PIù GIORNI PRENOTATI
+        System.out.println("*** UTENTI CON PIù GIORNI PRENOTATI ***");
+        piattaforma.getTopUtenti();
+
 
         //TEST mediaPostiLetto()
         System.out.println("*** MEDIA POSTI LETTO ***");

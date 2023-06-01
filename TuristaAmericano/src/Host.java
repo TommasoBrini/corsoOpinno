@@ -15,4 +15,8 @@ public class Host extends Utente{
     public int getNumPrenotazioni() {
         return numPrenotazioni;
     }
+
+    public void setNumPrenotazioni(int numPrenotazioni) {
+        this.numPrenotazioni = numPrenotazioni;
+    }
 }
