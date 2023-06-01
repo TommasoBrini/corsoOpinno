@@ -25,7 +25,10 @@ public class Dictionary {
 
     public void inserisciParola(String parola, Set<String> significato){
         Map<String, Set<String>> parole = dictionary.get(String.valueOf(parola.charAt(0)));
-        parole.put(parola, significato);
+        if(parole.get(parola) == null)
+            parole.put(parola, significato);
+        else
+            System.out.println("Parola già inserita");
     }
 
     public boolean cercaParola(String parola) throws WordNotPresentException{
