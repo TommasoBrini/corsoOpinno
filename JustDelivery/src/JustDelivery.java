@@ -37,6 +37,20 @@ public class JustDelivery {
         }
     }
 
-    public
+    /**
+     * ricerca all'interno della lista dei ristoranti tutti i ristoranti che contengono la cucina specificata.
+     * @param cucina TipoCucina da ricercare.
+     * @return la lista dei ristoranti con la cucina selezionata.
+     */
+    public List<Ristorante> cercaRistorantiCucina(TipoCucina cucina){
+        List<Ristorante> res = new ArrayList<>();
+        for (Ristorante ristorante : ristoranti) {
+            List<TipoCucina> cucine = ristorante.getTipoCucina();
+            if(cucine.contains(cucina)){
+                res.add(ristorante);
+            }
+        }
+        return res;
+    }
 
 }

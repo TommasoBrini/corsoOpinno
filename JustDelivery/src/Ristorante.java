@@ -8,7 +8,7 @@ public class Ristorante {
     private List<Prodotto> menu = new ArrayList();
     private List<TipoCucina> tipoCucina = new ArrayList();
 
-    public Ristorante(UUID id, List<Prodotto> menu, List<TipoCucina> tipoCucina) {
+    public Ristorante(UUID id, List<TipoCucina> tipoCucina) {
         this.id = id;
         this.menu = menu;
         this.tipoCucina = tipoCucina;
@@ -41,4 +41,5 @@ public class Ristorante {
         Ristorante other = (Ristorante) obj;
         return Objects.equals(id, other.id);
     }
+
 }
