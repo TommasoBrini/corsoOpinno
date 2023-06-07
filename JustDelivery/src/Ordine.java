@@ -1,13 +1,15 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Ordine {
     private Ristorante ristorante;
     private ArrayList<Prodotto> prodotti;
-    private double prezzoTot;
+    private double prezzoTot = 0;
 
     public Ordine(ArrayList<Prodotto> prodotti ,Ristorante ristorante ) {
         this.prodotti = prodotti;
         this.ristorante = ristorante;
+        calcolaPrezzo();
     }
 
     public void calcolaPrezzo(){
@@ -17,13 +19,18 @@ public class Ordine {
         }
 //        double sommaPrezzi = 0.0;
 //        prodotti.stream().mapToDouble(Prodotto::getPrezzo).forEach(p -> sommaPrezzi += p);
-        this.prezzoTot=sum;
+        this.prezzoTot=sum + getRistorante().getSpesaSpedizione();
 
     }
-    public void aggiungiProdotti(ArrayList<Prodotto> prodotti) {
+    public void aggiungiProdotti(List<Prodotto> prodotti) {
         this.prodotti.addAll(prodotti);
+        calcolaPrezzo();
     }
 
+    public void aggiungiProdotto(Prodotto prodotto) {
+        prodotti.add(prodotto);
+        calcolaPrezzo();
+    }
 
     public ArrayList<Prodotto> getProdotti(){
         return prodotti;
@@ -35,4 +42,8 @@ public class Ordine {
         return prezzoTot;
     }
 
+    @Override
+    public String toString() {
+        return " Prodotti=" + prodotti.toString() + ", prezzoTot=" + prezzoTot + ",  di cui le spese di spedizione sono= " + getRistorante().getSpesaSpedizione();
+    }
 }

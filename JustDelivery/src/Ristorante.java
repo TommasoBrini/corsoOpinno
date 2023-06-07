@@ -4,14 +4,21 @@ import java.util.Objects;
 import java.util.UUID;
 
 public class Ristorante {
+    private String nome;
     private UUID id;
     private List<Prodotto> menu = new ArrayList();
     private List<TipoCucina> tipoCucina = new ArrayList();
+    private double spesaSpedizione;
 
-    public Ristorante(UUID id, List<TipoCucina> tipoCucina) {
+    public Ristorante(String nome,UUID id, List<TipoCucina> tipoCucina, double spesaSpedizione) {
+        this.nome=nome;
         this.id = id;
-        this.menu = menu;
         this.tipoCucina = tipoCucina;
+        this.spesaSpedizione = spesaSpedizione;
+    }
+
+    public String getNome() {
+        return nome;
     }
 
     public UUID getId() {
@@ -30,6 +37,10 @@ public class Ristorante {
         this.menu = menu;
     }
 
+    public double getSpesaSpedizione(){
+        return spesaSpedizione;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -40,6 +51,11 @@ public class Ristorante {
         }
         Ristorante other = (Ristorante) obj;
         return Objects.equals(id, other.id);
+    }
+
+    @Override
+    public String toString() {
+        return "nome = " + nome;
     }
 
 }

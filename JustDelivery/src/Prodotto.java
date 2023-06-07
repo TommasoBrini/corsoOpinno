@@ -7,11 +7,14 @@ public class Prodotto {
         this.prezzo = prezzo;
     }
 
-    public void setNome(String name) {this.nome = name;}
+    public void setNome(String nome) {this.nome = nome;}
 
     public void setPrezzo(double prezzo) {this.prezzo = prezzo;}
 
     public String getNome() {return nome;}
 
     public double getPrezzo() {return prezzo;}
+
+    @Override
+    public String toString() {return "Prodotto{" + "nome='" + nome + '\'' + ", prezzo=" + prezzo + " € }";}
 }
