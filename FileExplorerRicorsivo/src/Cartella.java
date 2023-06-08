@@ -10,14 +10,17 @@ public class Cartella {
         path = percorso;
     }
 
-    public void stampa(){
-        System.out.println(path.toString());
-        File file = new File(path.toString());
-        System.out.println(file.listFiles());
-    }
-
     public Path getPath() {
         return path;
+    }
+
+    /**
+     * Cerca file chiamato dal main
+     * @param nomeFile file da cercare
+     * @return
+     */
+    public String cercaFile(String nomeFile){
+        return cercaFile(new File(path.toString()), nomeFile);
     }
 
 
@@ -57,7 +60,7 @@ public class Cartella {
      * @return la stringa del percorso del file trovato
      */
     public String cercaFileInSottoCartella(String sottocartella, String nomeFile){
-        //creo la cartella a partite dalla stringa sottocartella, contenente il nome
+        //creo la cartella a partire dalla stringa sottocartella, contenente il nome
         File subDirectory = new File(path.toString(), sottocartella);
         //chiamo cercaFile passandogli come cartella principale la sottocartella selezionata
         return cercaFile(subDirectory, nomeFile);
@@ -86,6 +89,36 @@ public class Cartella {
                     //se f è un file con estensione specificata lo aggiungo a res
                     res.add(f.getPath().toString());
                 }
+            }
+        }
+        return res;
+    }
+
+    public List<String> cercaFileByEstensione(File directory, List<String> estensioni){
+        List<String> res = new ArrayList<>();
+        for (String s : estensioni) {
+            res.addAll(cercaFileByEstensione(directory, s));
+        }
+        return res;
+    }
+
+    @Override
+    public String toString(){
+        String res = "|--" + path.getFileName() + "\n";
+        return res + toString(new File(path.toString()), 2);
+    }
+
+    public String toString(File directory, int i){
+        File[] files = directory.listFiles();
+        String res = "";
+        for (File file : files) {
+            for(int j=0; j<i; j++){
+                res = res + "|--";
+            }
+            res = res + " " + file.getName() + "\n";
+
+            if(file.isDirectory()){
+                res = res + toString(file, i+1);
             }
         }
         return res;
