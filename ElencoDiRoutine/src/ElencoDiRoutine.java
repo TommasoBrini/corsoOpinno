@@ -9,7 +9,7 @@ public class ElencoDiRoutine {
     public void esegui(String stringa){
         // Eseguire ogni funzione all'interno di functions e stampare il risultato finale
         for (Function<String, Integer> function : functions) {
-            int res = 0;
+            int res;
             try{
                 res = function.apply(stringa);
             } catch (Exception e){
