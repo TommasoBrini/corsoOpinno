@@ -42,5 +42,10 @@ public class Main {
         multiMap.mapEach((key,value)-> value + "ciao");
         System.out.println(multiMap);
 
+        System.out.println("*** Iterating through the map: ***");
+        for (MultimappaGenerica.Elemento<String, String> element : multiMap) {
+            System.out.println("Key: " + element.getKey() + ", Value: " + element.getValue());
+        }
+
     }
 }

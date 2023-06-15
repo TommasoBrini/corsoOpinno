@@ -1,11 +1,9 @@
 import java.util.*;
 import java.util.function.BiFunction;
-import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-public class MultimappaGenerica<K, V> implements Iterable<MultimappaGenerica.Elemento<K,V>>{
+public class MultimappaGenerica<K, V> implements Iterable<MultimappaGenerica.Elemento<K, V>> {
     Map<K, List<V>> map;
 
     public MultimappaGenerica() {
@@ -54,8 +52,6 @@ public class MultimappaGenerica<K, V> implements Iterable<MultimappaGenerica.Ele
                 .collect(Collectors.toList()));
     }
 
-
-
     @Override
     public String toString() {
         return "map=" + map;
@@ -69,7 +65,7 @@ public class MultimappaGenerica<K, V> implements Iterable<MultimappaGenerica.Ele
         return elements.iterator();
     }
 
-    public class Elemento<K,V>{
+    public static class Elemento<K,V>{
         private final K key;
         private final V value;
 
@@ -86,6 +82,5 @@ public class MultimappaGenerica<K, V> implements Iterable<MultimappaGenerica.Ele
             return value;
         }
     }
-
 
 }
