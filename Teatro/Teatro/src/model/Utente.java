@@ -56,7 +56,7 @@ public class Utente implements Comparable<Utente>{
         return new Utente((rs.getInt("id")),
                 rs.getString("nome"),
                 rs.getString("cognome"),
-                rs.getString("email"),
+                rs.getString("mail"),
                 rs.getString("telefono"),
                 rs.getString("indirizzo"));
     }
