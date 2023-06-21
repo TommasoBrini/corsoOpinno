@@ -1,8 +1,9 @@
-package repository;
+package DAO.implement;
 
-import entities.Utente;
+import DAO.dao.UtenteDAO;
+import model.Utente;
 
-public class UtenteRepo {
+public class UtenteDaoSQL implements UtenteDAO {
     public Utente save(Utente ut){
         // APRE CONNESSIONE DATABASE TRAMITE CONNECTION HANDLER
         // GESTISCE LA QUERY DI INSERIMENTO
