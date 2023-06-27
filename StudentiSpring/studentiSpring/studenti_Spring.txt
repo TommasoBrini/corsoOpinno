@@ -1,0 +1,17 @@
+# 01-Spring configuration
+## _Gestione segreteria studenti_
+
+Immagina di dover sviluppare un'applicazione Spring per la gestione di un elenco di studenti.
+L'applicazione deve consentire di aggiungere nuovi studenti e visualizzare l'elenco completo degli studenti registrati.
+Implementa le seguenti funzionalità utilizzando i concetti di Spring menzionati:
+
+- Crea una classe Student con i seguenti attributi: id, matricola, nome, età
+- Utilizza Lombok per generare automaticamente i metodi getter, setter, costruttore e toString()
+- Crea una classe StudentManager che sarà responsabile della gestione degli studenti.
+- Crea una classe ApplicationConfig con il Bean 'StudentManager'
+- Crea una classe che allo startup del sistema, aggiunga un dataset di 5 studenti alla lista
+- Esegui l'applicazione e verifica che gli studenti vengano registrati correttamente e che l'elenco degli studenti venga stampato correttamente.
+
+Assicurati di utilizzare correttamente tutte le annotazioni viste durante la sessione di live coding
+
+Happy coding! 
