@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.stereotype.Component;
 
 @AllArgsConstructor
 @Getter
@@ -13,5 +14,5 @@ public class Student {
     private int id;
     private int matricola;
     private String nome;
-    private int età;
+    private int eta;
 }
