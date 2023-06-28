@@ -16,6 +16,7 @@ public class Postazione {
 
     private String descrizione;
 
+    @Enumerated(EnumType.STRING)
     private TipoPostazione tipo;
 
     private int numMaxOccupanti;
