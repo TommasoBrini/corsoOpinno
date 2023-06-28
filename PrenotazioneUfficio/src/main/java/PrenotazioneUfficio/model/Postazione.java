@@ -4,8 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @AllArgsConstructor
-@Getter
-@Setter
 @Entity
 @Data
 public class Postazione {

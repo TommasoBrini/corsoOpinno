@@ -6,12 +6,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 @AllArgsConstructor
-@Getter
-@Setter
 @Entity
 @Data
 public class Città {

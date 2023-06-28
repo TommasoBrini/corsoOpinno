@@ -3,14 +3,10 @@ package PrenotazioneUfficio.model;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.time.LocalDate;
 
 @AllArgsConstructor
-@Setter
-@Getter
 @Entity
 @Data
 public class Prenotazione {
