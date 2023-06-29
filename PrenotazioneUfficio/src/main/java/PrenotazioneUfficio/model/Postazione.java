@@ -24,6 +24,8 @@ public class Postazione {
     @ManyToOne
     private Edificio edificio;
 
+    public Postazione(){}
+
     public Postazione(String codice, String descrizione, TipoPostazione tipo, int numMaxOccupanti, Edificio edificio) {
         this(null, codice, descrizione, tipo, numMaxOccupanti, edificio);
     }

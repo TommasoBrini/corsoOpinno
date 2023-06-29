@@ -17,6 +17,8 @@ public class Edificio {
     @ManyToOne
     private Città città;
 
+    public Edificio(){}
+
     public Edificio(String nome, String indirizzo, Città città) {
         this(null, nome, indirizzo, città);
     }

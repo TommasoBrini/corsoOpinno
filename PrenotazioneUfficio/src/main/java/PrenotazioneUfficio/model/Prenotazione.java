@@ -23,6 +23,8 @@ public class Prenotazione {
     private LocalDate dataPrenotazione;
     private LocalDate dataPrenotata;
 
+    public Prenotazione(){}
+
     public Prenotazione(Postazione postazione, Utente utente, LocalDate dataPrenotazione, LocalDate dataPrenotata) {
         this(null, postazione, utente,dataPrenotazione,dataPrenotata);
     }

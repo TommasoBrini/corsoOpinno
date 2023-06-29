@@ -21,6 +21,8 @@ public class Utente {
     private String email;
     private String password;
 
+    public Utente(){}
+
     public Utente(String username, String nome, String email, String password) {
         this(null, username, nome, email,password);
     }

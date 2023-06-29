@@ -17,6 +17,8 @@ public class Città {
 
     private String nome;
 
+    public Città(){}
+
     public Città(String nome) {
         this(null, nome);
     }
