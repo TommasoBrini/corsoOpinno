@@ -25,4 +25,8 @@ public class Utente {
     public Utente(){
 
     }
+
+    public Utente(String nome, String cognome, LocalDate data, String CF, double credito) {
+        this(null, nome, cognome, data, CF, credito);
+    }
 }

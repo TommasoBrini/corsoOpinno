@@ -23,8 +23,8 @@ public class Veicolo {
     @Column(nullable = false)
     private boolean isFree;
 
-    @Column(nullable = false)
-    private float statoRifornimento;
+    @Column(nullable = true)
+    private Double statoRifornimento;
 
     @Column(nullable = true)
     private String targa;
@@ -35,5 +35,9 @@ public class Veicolo {
 
     public Veicolo(){
 
+    }
+
+    public Veicolo(TipoVeicolo tipo, String posizione, boolean isFree, Double statoRifornimento, String targa, TipoPatente patente) {
+        this(null,tipo, posizione, isFree, statoRifornimento, targa, patente);
     }
 }

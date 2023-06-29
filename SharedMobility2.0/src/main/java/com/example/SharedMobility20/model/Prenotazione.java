@@ -20,4 +20,12 @@ public class Prenotazione {
 
     @ManyToOne
     private Veicolo veicolo;
+
+    public Prenotazione(){
+
+    }
+
+    public Prenotazione(Timestamp timestamp, Utente utente, Veicolo veicolo) {
+        this(null, timestamp,utente,veicolo);
+    }
 }
