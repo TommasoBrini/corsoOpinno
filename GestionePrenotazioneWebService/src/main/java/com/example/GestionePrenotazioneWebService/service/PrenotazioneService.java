@@ -17,8 +17,8 @@ public class PrenotazioneService {
         this.repo = repo;
     }
 
-    public void savePrenotazione(Prenotazione p){
-        repo.save(p);
+    public Prenotazione savePrenotazione(Prenotazione p){
+        return repo.save(p);
     }
 
     public Prenotazione updatePrenotazione(Prenotazione p){

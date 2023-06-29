@@ -17,8 +17,8 @@ public class EdificioService {
         this.repo = repo;
     }
 
-    public void saveEdificio(Edificio e){
-        repo.save(e);
+    public Edificio saveEdificio(Edificio e){
+        return repo.save(e);
     }
 
     public Edificio updateEdificio(Edificio e){

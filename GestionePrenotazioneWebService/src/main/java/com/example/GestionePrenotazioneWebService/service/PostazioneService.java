@@ -17,8 +17,8 @@ public class PostazioneService {
         this.repo = repo;
     }
 
-    public void savePostazione(Postazione p){
-        repo.save(p);
+    public Postazione savePostazione(Postazione p){
+        return repo.save(p);
     }
 
     public Postazione updatePostazione(Postazione p){

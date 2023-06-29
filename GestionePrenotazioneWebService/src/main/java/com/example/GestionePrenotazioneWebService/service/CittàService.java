@@ -17,8 +17,8 @@ public class CittàService {
         this.repo = repo;
     }
 
-    public void saveCity(Città c){
-        repo.save(c);
+    public Città saveCity(Città c){
+        return repo.save(c);
     }
 
     public Città updateCity(Città c){

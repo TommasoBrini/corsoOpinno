@@ -17,8 +17,8 @@ public class UtenteService {
         this.repo = repo;
     }
 
-    public void saveUser(Utente u){
-        repo.save(u);
+    public Utente saveUser(Utente u){
+        return repo.save(u);
     }
 
     public Utente updateUser(Utente u){
