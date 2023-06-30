@@ -15,8 +15,10 @@ public class Sala {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     @Column(nullable = false)
     private String nome;
+
     @ManyToOne
     private Sede sede;
 
