@@ -29,4 +29,11 @@ public class Biglietto {
 
     @ManyToOne
     private Posto posto;
+
+    public Biglietto(LocalDateTime timestamp, Utente utente, Spettacolo spettacolo, Posto posto) {
+        this.timestamp = timestamp;
+        this.utente = utente;
+        this.spettacolo = spettacolo;
+        this.posto = posto;
+    }
 }
